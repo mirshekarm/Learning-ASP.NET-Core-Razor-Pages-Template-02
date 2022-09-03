@@ -7,16 +7,16 @@
 		SeedWork.IEntityHasLogicalDelete,
 		SeedWork.IEntityHasUpdateDateTime
 	{
+		#region Constant(s)
+		public const byte DescriptionMaxLength = 100;
+		#endregion /Constant(s)
+
 		#region Constructor
 		public PostCategory(string title) : base()
 		{
 			Title = title;
 
-			//SetUpdateDateTime();
 			UpdateDateTime = InsertDateTime;
-
-			//Posts =
-			//	new System.Collections.Generic.List<Posts>();
 
 			SubCategories =
 				new System.Collections.Generic.List<PostCategory>();

@@ -16,12 +16,20 @@ namespace Data.Configurations
 			// **************************************************
 			builder
 				.Property(current => current.Title)
-				.HasMaxLength(maxLength: Constants.MaxLength.Title)
-				.IsRequired()
+				.HasMaxLength(Constants.MaxLength.Title)
+				.IsRequired(required: true)
 				.IsUnicode(true)
 				;
 			// **************************************************
 
+			// **************************************************
+			builder
+				.Property(current => current.Description)
+				.HasMaxLength(maxLength: Domain.PostCategory.DescriptionMaxLength)
+				.IsRequired(required: false)
+				.IsUnicode(unicode: true)
+				;
+			// **************************************************
 
 			// **************************************************
 			builder
@@ -33,18 +41,9 @@ namespace Data.Configurations
 				;
 			// **************************************************
 
-			// **************************************************
-			builder
-				.HasIndex(current => new { current.Ordering })
-				.IsClustered(clustered: false)
-				.IsUnique(unique: false)
-				;
-			// **************************************************
-
 			//**************************************************
 			builder
 				.HasIndex(current => new { current.ParentId, current.Title })
-				//.HasDatabaseName(name: $"IX_{ nameof(Domain.PostCategory.ParentId) }_{ nameof(Domain.PostCategory.Title) }")
 				.IsUnique(unique: true)
 				;
 			//**************************************************

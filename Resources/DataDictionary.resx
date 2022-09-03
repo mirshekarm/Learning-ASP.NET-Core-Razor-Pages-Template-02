@@ -471,4 +471,10 @@
   <data name="LastLoginDateTime" xml:space="preserve">
     <value>Last Login Date Time</value>
   </data>
+  <data name="SubPostCategoriesCount" xml:space="preserve">
+    <value>Sub PostCategories Count</value>
+  </data>
+  <data name="PostCategory" xml:space="preserve">
+    <value>Post Category</value>
+  </data>
 </root>

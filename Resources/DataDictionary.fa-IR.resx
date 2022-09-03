@@ -474,4 +474,10 @@
   <data name="LastLoginDateTime" xml:space="preserve">
     <value>زمان آخرین ورود به سامانه</value>
   </data>
+  <data name="SubPostCategoriesCount" xml:space="preserve">
+    <value>تعداد زیر دسته بندی های پست</value>
+  </data>
+  <data name="PostCategory" xml:space="preserve">
+    <value>دسته بندی پست</value>
+  </data>
 </root>

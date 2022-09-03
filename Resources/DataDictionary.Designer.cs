@@ -826,6 +826,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Post Category.
+        /// </summary>
+        public static string PostCategory {
+            get {
+                return ResourceManager.GetString("PostCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Publish Finish Date Time.
         /// </summary>
         public static string PublishFinishDateTime {
@@ -984,6 +993,15 @@ namespace Resources {
         public static string SubMenuItems {
             get {
                 return ResourceManager.GetString("SubMenuItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sub PostCategories Count.
+        /// </summary>
+        public static string SubPostCategoriesCount {
+            get {
+                return ResourceManager.GetString("SubPostCategoriesCount", resourceCulture);
             }
         }
         
