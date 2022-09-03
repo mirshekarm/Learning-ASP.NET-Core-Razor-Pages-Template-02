@@ -477,4 +477,7 @@
   <data name="PostCategory" xml:space="preserve">
     <value>Post Category</value>
   </data>
+  <data name="PostCategories" xml:space="preserve">
+    <value>Post Categories</value>
+  </data>
 </root>

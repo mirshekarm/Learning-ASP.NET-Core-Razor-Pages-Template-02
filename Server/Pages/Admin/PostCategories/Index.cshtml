@@ -1,0 +1,103 @@
+﻿@page
+@model Server.Pages.Admin.PostCategories.IndexModel
+
+@{
+    var pageTitle =
+        $"{Resources.ButtonCaptions.ListOf} {Resources.DataDictionary.PostCategories}";
+
+    ViewData[Constants.ViewDataKeyName.PageTitle] = pageTitle;
+}
+
+<section-page-header>
+    @(pageTitle)
+</section-page-header>
+
+<section-page-actions>
+    <a asp-page="Create">
+        @(Html.DtatGetLinkCaptionForCreate())
+    </a>
+</section-page-actions>
+
+<section-table>
+    <table>
+        <caption>
+            @(pageTitle)
+        </caption>
+
+        <thead>
+            <tr>
+                <th>
+                    @(Resources.DataDictionary.RowNumber)
+                </th>
+                <th>
+                </th>
+                <th>
+                    @(Resources.DataDictionary.Name)
+                </th>
+                <th>
+                    @(Resources.DataDictionary.IsActive)
+                </th>
+                <th>
+                    @(Resources.DataDictionary.IsUndeletable)
+                </th>
+                <th>
+                    @(Resources.DataDictionary.Ordering)
+                </th>
+                <th>
+                    @(Resources.DataDictionary.SubPostCategoriesCount)
+                </th>
+                <th>
+                    @(Resources.DataDictionary.InsertDateTime)
+                </th>
+                <th>
+                    @(Resources.DataDictionary.UpdateDateTime)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (var index = 0; index <= Model.ViewModel.Count - 1; index++)
+            {
+                var item = Model.ViewModel[index];
+
+                <tr>
+                    @(Html.DtatDisplayRowNumberWithTd(value: index + 1))
+
+                    <table-actions>
+                        <a asp-page="Details" asp-route-id="@(item.Id)">
+                            @(Html.DtatGetIconDetails())
+                        </a>
+                        <a asp-page="Update" asp-route-id="@(item.Id)">
+                            @(Html.DtatGetIconUpdate())
+                        </a>
+                        <a asp-page="Delete" asp-route-id="@(item.Id)">
+                            @(Html.DtatGetIconDelete())
+                        </a>
+                        @if (item.SubPostCategoriesCount > 0)
+                        {
+                            <a asp-page="Index" asp-route-parentId="@(item.Id)">
+                                @(Html.DtatGetIconChildren())
+                            </a>
+                        }
+                    </table-actions>
+
+                    <td>
+                        @(item.Title)
+                    </td>
+
+                    @(Html.DtatDisplayBooleanWithTd(value: item.IsActive))
+
+                    @(Html.DtatDisplayBooleanWithTd(value: item.IsUndeletable))
+
+                    @(Html.DtatDisplayIntegerWithTd(value: item.Ordering))
+
+                    @(Html.DtatDisplayIntegerWithTd(value: item.SubPostCategoriesCount))
+
+                    @(Html.DtatDisplayDateTimeWithTd(value: item.InsertDateTime))
+
+                    @(Html.DtatDisplayDateTimeWithTd(value: item.UpdateDateTime))
+                </tr>
+            }
+        </tbody>
+    </table>
+</section-table>
