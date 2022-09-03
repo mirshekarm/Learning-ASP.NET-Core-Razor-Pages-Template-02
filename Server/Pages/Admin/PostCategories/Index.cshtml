@@ -38,9 +38,6 @@
                     @(Resources.DataDictionary.IsActive)
                 </th>
                 <th>
-                    @(Resources.DataDictionary.IsUndeletable)
-                </th>
-                <th>
                     @(Resources.DataDictionary.Ordering)
                 </th>
                 <th>
@@ -86,8 +83,6 @@
                     </td>
 
                     @(Html.DtatDisplayBooleanWithTd(value: item.IsActive))
-
-                    @(Html.DtatDisplayBooleanWithTd(value: item.IsUndeletable))
 
                     @(Html.DtatDisplayIntegerWithTd(value: item.Ordering))
 

@@ -835,6 +835,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Post Categories Manager.
+        /// </summary>
+        public static string PostCategoriesManager {
+            get {
+                return ResourceManager.GetString("PostCategoriesManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Post Category.
         /// </summary>
         public static string PostCategory {

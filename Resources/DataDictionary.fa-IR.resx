@@ -483,4 +483,7 @@
   <data name="PostCategories" xml:space="preserve">
     <value>طبقه بندی های پست</value>
   </data>
+  <data name="PostCategoriesManager" xml:space="preserve">
+    <value>مدیریت طبقه بندی های پست</value>
+  </data>
 </root>

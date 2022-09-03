@@ -59,7 +59,6 @@ public class IndexModel : Infrastructure.BasePageModelWithDatabaseContext
 					Id = current.Id,
 					Title = current.Title,
 					IsActive = current.IsActive,
-					IsUndeletable = current.IsUndeletable,
 					Ordering = current.Ordering,
 					SubPostCategoriesCount = current.SubCategories.Count,
 					InsertDateTime = current.InsertDateTime,

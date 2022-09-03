@@ -67,7 +67,6 @@ public class DeleteModel : Infrastructure.BasePageModelWithDatabaseContext
 					Description = current.Description,
 					InsertDateTime = current.InsertDateTime,
 					UpdateDateTime = current.UpdateDateTime,
-					IsUnDeletable = current.IsUndeletable,
 					ParentTitle = current.Parent.Title
 				})
 				.FirstOrDefaultAsync();

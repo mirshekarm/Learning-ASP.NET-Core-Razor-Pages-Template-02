@@ -17,13 +17,6 @@
 		// **********
 		[System.ComponentModel.DataAnnotations.Display
 			(ResourceType = typeof(Resources.DataDictionary),
-			Name = nameof(Resources.DataDictionary.IsUndeletable))]
-		public bool IsUnDeletable { get; set; }
-		// **********
-
-		// **********
-		[System.ComponentModel.DataAnnotations.Display
-			(ResourceType = typeof(Resources.DataDictionary),
 			Name = nameof(Resources.DataDictionary.Parent))]
 		public System.Guid? ParentId { get; set; }
 		// **********

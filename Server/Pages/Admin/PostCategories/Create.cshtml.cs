@@ -143,7 +143,6 @@ public class CreateModel : Infrastructure.BasePageModelWithDatabaseContext
 					Description = fixedDescription,
 					ParentId = ViewModel.ParentId,
 					IsActive = ViewModel.IsActive,
-					IsUndeletable = ViewModel.IsUnDeletable,
 					Ordering = ViewModel.Ordering,
 				};
 

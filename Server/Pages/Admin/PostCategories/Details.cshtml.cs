@@ -57,7 +57,6 @@ public class DetailsModel : Infrastructure.BasePageModelWithDatabaseContext
 					Ordering = current.Ordering,
 					Description = current.Description,
 					ParentTitle = current.Parent.Title,
-					IsUnDeletable = current.IsUndeletable,
 					InsertDateTime = current.InsertDateTime,
 					UpdateDateTime = current.UpdateDateTime,
 					SubPostCategoryCount = current.SubCategories.Count,

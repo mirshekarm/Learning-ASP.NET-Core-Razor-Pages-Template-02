@@ -480,4 +480,7 @@
   <data name="PostCategories" xml:space="preserve">
     <value>Post Categories</value>
   </data>
+  <data name="PostCategoriesManager" xml:space="preserve">
+    <value>Post Categories Manager</value>
+  </data>
 </root>

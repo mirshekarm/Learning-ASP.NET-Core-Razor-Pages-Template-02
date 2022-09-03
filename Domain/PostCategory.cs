@@ -3,7 +3,6 @@
 	public class PostCategory :
 		SeedWork.Entity,
 		SeedWork.IEntityHasIsActive,
-		SeedWork.IEntityHasIsUndeletable,
 		SeedWork.IEntityHasUpdateDateTime
 	{
 		#region Constant(s)
@@ -82,16 +81,6 @@
 			(Name = nameof(Resources.DataDictionary.UpdateDateTime),
 			ResourceType = typeof(Resources.DataDictionary))]
 		public System.DateTime UpdateDateTime { get; private set; }
-		// **********
-
-		// **********
-		/// <summary>
-		/// قابل حذف بودن/نبودن
-		/// </summary>
-		[System.ComponentModel.DataAnnotations.Display
-			(Name = nameof(Resources.DataDictionary.IsUndeletable),
-			ResourceType = typeof(Resources.DataDictionary))]
-		public bool IsUndeletable { get; set; }
 		// **********
 
 		// **********

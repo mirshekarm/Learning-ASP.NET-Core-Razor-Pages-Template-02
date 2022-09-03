@@ -16,10 +16,6 @@ public class IndexItemViewModel : object
 	// **********
 
 	// **********
-	public bool IsUndeletable { get; set; }
-	// **********
-
-	// **********
 	public string Title { get; set; }
 	// **********
 
